@@ -1,5 +1,17 @@
 # Contract Interaction
 
+## Short Summary
+
+This report documents a series of interactions with a Solidity smart contract named "HelloWorld", deployed on Ethereum Sepolia Testnet. The contract allows users to update a text message and transfer ownership. Throughout the interactions, several users modified the text and transferred ownership among multiple wallets.
+
+## Project Purpose
+
+The purpose of this project is to explore and understand the functionality of a basic Solidity smart contract, focusing on how to safely interact with it, including modifying its state and transferring ownership. The project also aims to identify potential pitfalls in contract management and propose solutions to improve the contract's robustness and security. Through practical interactions and collaborative problem-solving, the team gains valuable experience in managing smart contracts on the EVM blockchain.
+
+## Additional Comments
+
+A critical mistake was made when ownership was transferred to the contract's own address, rendering it non-interactable. To prevent such issues, the team proposed solutions, including adding validation to prevent ownership transfers to the contract's address and implementing a backup recovery function. A modified contract version was subsequently deployed and tested by the team.
+
 ## Scenario
 
 ### Tianbuyung's interaction
@@ -31,7 +43,7 @@
 ### Vin's interaction
 
 9. Call `setText` function to change the text into `Now Devin is the owner,`
-transaction hash: [0x55ab6fec8f4486e6d38495a6ce59f2bd3948505ca29f88565828c44ff2933a38](https://sepolia.etherscan.io/tx/0x55ab6fec8f4486e6d38495a6ce59f2bd3948505ca29f88565828c44ff2933a38) ![](<Screenshot 2024-08-09 at 22.21.29.png>)
+   transaction hash: [0x55ab6fec8f4486e6d38495a6ce59f2bd3948505ca29f88565828c44ff2933a38](https://sepolia.etherscan.io/tx/0x55ab6fec8f4486e6d38495a6ce59f2bd3948505ca29f88565828c44ff2933a38) ![](<Screenshot 2024-08-09 at 22.21.29.png>)
 
 10. Initially I want to transfer the ownership to the next team member's address, but I mistakenly transfer the ownership address as the smart contract's own address. In result, the smart contract is cannot be interacted anymore. Transaction hash: [0xfae0c61732f7b1a8bd9998edd6461c3f019d6efa456da00d35198ddd49352baa](https://sepolia.etherscan.io/tx/0xfae0c61732f7b1a8bd9998edd6461c3f019d6efa456da00d35198ddd49352baa)
 
@@ -45,7 +57,6 @@ transaction hash: [0x55ab6fec8f4486e6d38495a6ce59f2bd3948505ca29f88565828c44ff29
 13. Call `setText` function to change the text into `Hello from Vins`. Transaction hash: [0x875573de7196dfc93eda7eebf8c4e835b81da072baa53c6a156beeb6d8191778](https://sepolia.etherscan.io/tx/0x875573de7196dfc93eda7eebf8c4e835b81da072baa53c6a156beeb6d8191778) ![](<Screenshot 2024-08-09 at 23.02.01.png>)
 
 14. Call `transferOwnership` function to transfer ownership to **0xOwenn**'s wallet `0x5073c3929c9BdECd87Cc63068Fd3185F0b6f22A5`. Transaction hash: [0xd70ed8b34d48b119202527ebc38e6f8697886c0ea0b10d01069d6f5cbf200f70](https://sepolia.etherscan.io/tx/0xd70ed8b34d48b119202527ebc38e6f8697886c0ea0b10d01069d6f5cbf200f70) ![](<Screenshot 2024-08-09 at 23.06.36.png>)
-
 
 ### GavinOwen interaction
 
