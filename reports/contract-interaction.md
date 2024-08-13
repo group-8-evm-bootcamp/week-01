@@ -78,3 +78,15 @@ A critical mistake was made when ownership was transferred to the contract's own
 20. Call `setText` function to change the text from `Hello from GavinOwen` to `GM from Rama <3`. Transaction hash: [0xdae6883ee5f317685c38b98ebccb597ece96e760fd709c1f26ae95fd34e32aa2](https://sepolia.etherscan.io/tx/0xdae6883ee5f317685c38b98ebccb597ece96e760fd709c1f26ae95fd34e32aa2) ![](<Screenshot 2024-08-10 223322.png>) ![](<Screenshot 2024-08-10 223432.png>)
 
 21. Call `transferOwnership` function to transfer ownership to **joosh**'s wallet `0x62cA7B13a0f7F3B4f55aAd7968aD0a78ea2d625C`. Transaction hash: [0x939386d66e85ef5e17bd2a9b25c870cd2154a2dc4ee213a44be4f087ea4a3698](https://sepolia.etherscan.io/tx/0x939386d66e85ef5e17bd2a9b25c870cd2154a2dc4ee213a44be4f087ea4a3698) ![](<Screenshot 2024-08-11 082704.png>)
+
+---
+
+### Raj's interaction
+
+1. Create [HelloWorld contract](../contracts/01_HelloWorld.sol) in [remix](https://remix.ethereum.org/).
+
+2. Compile and deploy the contract. The contract address is `0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47` with the transaction hash '0x991cf663788c7b90c6344217ed6acaa7035cff9f6f21b2c3ec42b9d446ccc174'
+
+3. Call the initial text after deploy and the result is `Hello World`.
+
+4. Change the text with `Raj here` via `setText function` with the with the Transaction Hash '0x1565547114bb6d3adec98740740f89198e706421e45f4446ae821eae648bb606'<img width="1440" alt="Screenshot 2024-08-11 at 11 21 27 PM" src="https://github.com/user-attachments/assets/4c582da6-3102-4abf-8331-25e7d4f00a30">
